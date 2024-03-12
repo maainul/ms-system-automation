@@ -17,7 +17,13 @@ export const upsertFormAttributeController = async (req, res) => {
 export const getFormAttributesController = async (req, res) => {
     try {
         const data = await FormAttributeModel.find()
-        console.error('Get Form Attribute:', data)
+        if (data.length === 0) {
+            return res.status(201).send({
+                success: true,
+                message: 'Form Attribute List',
+                data: "No Data Found",
+            });
+        }
         return res.status(201).send({
             success: true,
             message: 'Vehicle List',

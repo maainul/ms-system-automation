@@ -23,12 +23,12 @@ app.use(morgan('dev'))
 app.use(express.json())
 
 app.use(cors({
-    origin: ["http://localhost:3000", "https://system-automationconfig-frontend.netlify.app"],
+    origin: ["http://localhost:3002", "https://ms-system-automation.netlify.app"],
     credentials: true,
 }))
 
 // Router
-app.use('/api/v1/form-attribute', formAttribute)
+app.use('/api/v1/hr/form', formAttribute)
 
 
 const PORT = process.env.PORT || 8082;

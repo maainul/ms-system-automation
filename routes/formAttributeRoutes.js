@@ -1,5 +1,5 @@
 import express from 'express'
-import  { upsertFormAttributeController, getFormAttributesController } from '../controllers/formAttributeController.js'
+import { upsertFormAttributeController, getFormAttributesController } from '../controllers/formAttributeController.js'
 
 
 //router object
@@ -7,11 +7,11 @@ const router = express.Router()
 
 // routers
 
-// POST || REGISTER USER
-router.post("/create", upsertFormAttributeController)
+// POST || Add Table Attribute
+router.post("/attribute/create", upsertFormAttributeController)
 
-// GET || GET USER
-router.get("/list", getFormAttributesController)
+// GET || GET Form Attribute List
+router.get("/attribute/list", getFormAttributesController)
 
 
 export default router

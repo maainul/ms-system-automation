@@ -5,7 +5,7 @@ import morgan from 'morgan'
 import colors from "colors";
 import dotenv from "dotenv";
 import connectDB from './dbConnection.js';
-import formAttribute from './routes/formAttributeRoutes.js'
+import formAttributeRoute from './routes/formAttributeRoutes.js'
 
 //configure env
 dotenv.config()
@@ -28,10 +28,9 @@ app.use(cors({
 }))
 
 // Router
-app.use('/api/v1/hr/form', formAttribute)
+app.use('/api/v1/hr/form', formAttributeRoute)
 
-
-const PORT = process.env.PORT || 8082;
+const PORT = process.env.PORT || 8080;
 
 app.listen(PORT, () => {
     console.log(

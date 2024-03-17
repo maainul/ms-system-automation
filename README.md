@@ -9,3 +9,12 @@ https://www.youtube.com/watch?v=Jo5TVUBjbIs&ab_channel=CodingwithKevin
 https://www.youtube.com/watch?v=ZyBBv1JmnWQ&ab_channel=CodeBear
 
 
+https://docs.docker.com/reference/dockerfile/
+
+
+
+commdand 
+
+
+
+docker build .
